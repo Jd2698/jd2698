@@ -71,7 +71,7 @@
 
 		<Carousel :pictures="javaEcommercePictures">
 			<template #title>
-				Ecommerce básico desarrollado con Laravel 9 y Vue 3
+				Gestión de un ecommerce desarrollado con Java 17 como parte del proyecto del SENA
 			</template>
 		</Carousel>
 	</div>
