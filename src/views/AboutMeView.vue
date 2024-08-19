@@ -21,7 +21,7 @@
 			</div>
 		</div>
 
-		<section class="mt-7 flex flex-col gap-3">
+		<section class="mt-7 flex flex-col items-start gap-3">
 			<a href="mailto:j.delgado2698@gmail.com" target="_blank" class="flex gap-3 items-center">
 				<IconEmail class="h-5 text-zinc-200 fill-current" />
 				<span>j.delgado2698@gmail.com</span>

@@ -32,10 +32,10 @@
 		</card>
 
 		<card>
-			<template #title>Framework css</template>
-			<template #tool>Tailwindcss</template>
+			<template #title>Framework php</template>
+			<template #tool>Laravel</template>
 			<template #icon>
-				<iconTailwind :class="iconStyles + 'text-[#38BDF8]'" />
+				<iconLaravel :class="iconStyles  + 'text-[#f55247]'" />
 			</template>
 		</card>
 
@@ -48,15 +48,15 @@
 		</card>
 
 		<card>
-			<template #title>Framework php</template>
-			<template #tool>Laravel</template>
+			<template #title>Framework css</template>
+			<template #tool>Tailwindcss</template>
 			<template #icon>
-				<iconLaravel :class="iconStyles  + 'text-[#f55247]'" />
+				<iconTailwind :class="iconStyles + 'text-[#38BDF8]'" />
 			</template>
 		</card>
 
 		<card>
-			<template #title>Motor SQL</template>
+			<template #title>SQL Database</template>
 			<template #tool>MySQL</template>
 			<template #icon>
 				<IconMySql :class="iconStyles  + 'text-[#00758f]'" />
