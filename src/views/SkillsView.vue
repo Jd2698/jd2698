@@ -16,7 +16,7 @@
 	<main class="max-w-6xl mx-auto px-6 pb-4 grid gap-6 sm:grid-cols-2 md:grid-cols-3 md:justify-items-center">
 
 		<card>
-			<template #title>Language</template>
+			<template #title>Programming Language</template>
 			<template #tool>JavaScript</template>
 			<template #icon>
 				<iconJs :class="iconStyles  + 'text-[#f7df1e]'" />
@@ -24,7 +24,7 @@
 		</card>
 
 		<card>
-			<template #title>Language</template>
+			<template #title>Programming Language</template>
 			<template #tool>Java</template>
 			<template #icon>
 				<iconJava :class="iconStyles" />
@@ -32,7 +32,7 @@
 		</card>
 
 		<card>
-			<template #title>Framework php</template>
+			<template #title>PHP Framework</template>
 			<template #tool>Laravel</template>
 			<template #icon>
 				<iconLaravel :class="iconStyles  + 'text-[#f55247]'" />
@@ -40,7 +40,7 @@
 		</card>
 
 		<card>
-			<template #title>Framework js</template>
+			<template #title>JavaScript Framework</template>
 			<template #tool>Vue.js</template>
 			<template #icon>
 				<iconVue :class="iconStyles + 'text-[#42b883]'" />
@@ -48,7 +48,7 @@
 		</card>
 
 		<card>
-			<template #title>Framework css</template>
+			<template #title>CSS Framework</template>
 			<template #tool>Tailwindcss</template>
 			<template #icon>
 				<iconTailwind :class="iconStyles + 'text-[#38BDF8]'" />
@@ -64,8 +64,8 @@
 		</card>
 
 		<card>
-			<template #title>Repositorio</template>
-			<template #tool>GitHub</template>
+			<template #title>Version Control System</template>
+			<template #tool>Git - GitHub</template>
 			<template #icon>
 				<iconGitHub :class="iconStyles" />
 			</template>
