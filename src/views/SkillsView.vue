@@ -3,6 +3,7 @@
 
 	import iconJs from "../components/icons/IconJs.vue";
 	import iconJava from "../components/icons/IconJava.vue";
+	import iconPHP from "../components/icons/IconPHP.vue";
 	import iconTailwind from "../components/icons/IconTailwind.vue";
 	import IconLaravel from "../components/icons/IconLaravel.vue";
 	import iconGitHub from "../components/icons/IconGitHub.vue";
@@ -28,6 +29,14 @@
 			<template #tool>Java</template>
 			<template #icon>
 				<iconJava :class="iconStyles" />
+			</template>
+		</card>
+
+		<card>
+			<template #title>Programming Language</template>
+			<template #tool>PHP</template>
+			<template #icon>
+				<iconPHP :class="iconStyles + 'text-[#777BB4]'" />
 			</template>
 		</card>
 
