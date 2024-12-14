@@ -24,10 +24,8 @@ nav a {
 }
 nav a:focus {
 	outline: none;
-	border-bottom: 1px solid #696969;
 }
 nav a.router-link-exact-active {
 	color: #d8d8d8;
-	border-bottom: 1px solid #9c9b9b;
 }
 </style>

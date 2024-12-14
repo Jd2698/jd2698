@@ -11,9 +11,9 @@
 
 			<div class="md:col-span-2 p-2">
 				<h1 class="text-xs">SOBRE MÍ</h1>
-				<h2 class="mt-4 text-lg tracking-widest">¡Hola! me llamo Jamer</h2>
+				<h2 class="mt-4 text-lg tracking-widest">¡Hola! Soy Jamer</h2>
 				<p class="mt-2 text-sm leading-loose">
-					Vivo en Cali y soy aprendiz del SENA en el tecnólogo de Análisis y Desarrollo de Software del Centro CEAI. Me va bastante bien en el desarrollo de sitios web y el frontend, pero tengo un gran interés en el backend, la parte de la lógica y la creación de servidores.
+					Vivo en Cali y soy tecnólogo de Análisis y Desarrollo de Software. Me gusta desarrollar sitios web usando tecnologías de frontend, pero lo que realmente me llama la atención es el backend: la lógica, la creación de APIs y todo lo relacionado con servidores. Por eso, comencé a estudiar NodeJs y NestJS para profundizar más en esta área.
 				</p>
 				<p class="mt-2 text-sm leading-loose">
 					Disfruto trabajar en equipo y en un ambiente empático, ya que me gusta ayudar a las personas y aprender en el proceso.
