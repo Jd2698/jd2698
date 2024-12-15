@@ -5,6 +5,9 @@ on:
     branches:
       - main  # o la rama de tu preferencia
 
+permissions:
+  contents: write  # permiso para hacer push
+
 jobs:
   build_vue:
     runs-on: ubuntu-latest
