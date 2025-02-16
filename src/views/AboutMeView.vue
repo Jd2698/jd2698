@@ -13,7 +13,7 @@
 				<h1 class="text-xs">SOBRE MÍ</h1>
 				<h2 class="mt-4 text-lg tracking-widest">¡Hola! Soy Jamer</h2>
 				<p class="mt-2 text-sm leading-loose">
-					Vivo en Cali y soy tecnólogo de Análisis y Desarrollo de Software. Me gusta desarrollar sitios web usando tecnologías de frontend, pero lo que realmente me llama la atención es el backend: la lógica, la creación de APIs y todo lo relacionado con servidores. Por eso, comencé a estudiar NodeJs y NestJS para profundizar más en esta área.
+					Soy tecnólogo en Análisis y Desarrollo de Software y vivo en Cali. Tengo experiencia desarrollando aplicaciones web con tecnologías como Angular, Vue.js, NestJS y Laravel, creando soluciones funcionales y escalables tanto en frontend como en backend.
 				</p>
 				<p class="mt-2 text-sm leading-loose">
 					Disfruto trabajar en equipo y en un ambiente empático, ya que me gusta ayudar a las personas y aprender en el proceso.
