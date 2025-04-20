@@ -1,7 +1,10 @@
 ## Hola, mi nombre es Jamer Delgado 👋
 
 Soy Desarrollador de Software con experiencia en **backend** y **frontend**. Me gusta aprender nuevas tecnologías y mejorar mis habilidades constantemente. Disfruto trabajar en proyectos retadores y colaborar con otros para lograr buenos resultados.
- 
+
+## Tecnologías
+[![My Skills](https://skillicons.dev/icons?i=ts,js,html,css,angular,vue,react,tailwind,nodejs,java,php,laravel,express,nestjs,jest,mysql,postgres,sequelize,prisma,redux,&perline=10)](https://skillicons.dev)
+
 ## Contacto
 
 <a href="mailto:j.delgado2698@gmail.com">
