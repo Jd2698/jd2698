@@ -53,7 +53,7 @@ const experiences = [
           {{ item.body }}
         </p>
 
-        <div class="flex gap-2">
+        <div class="flex flex-wrap gap-2">
           <span
             v-for="tecnology of item.tecnologies"
             class="text-xs py-2 px-3 rounded-md cursor-default bg-zinc-800 transition-colors hover:bg-zinc-700/70 focus:bg-zinc-700/70 outline-none"
