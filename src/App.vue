@@ -1,9 +1,9 @@
 <script setup>
 import Experience from "./components/Experience.vue";
-import NavComponent from "./components/Nav.vue";
 import Projects from "./components/Projects.vue";
 import Tecnologies from "./components/Tecnologies.vue";
 import AboutMe from "./components/AboutMe.vue";
+import NavComponent from "./components/NavComponent.vue";
 </script>
 
 <template>
