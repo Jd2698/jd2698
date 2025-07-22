@@ -1,31 +1,33 @@
 <script setup>
-	import { RouterLink, RouterView } from "vue-router";
-	import IconGitHub from "./components/icons/IconGitHub.vue";
+import Experience from "./components/Experience.vue";
+import Nav from "./components/Nav.vue";
+import Projects from "./components/Projects.vue";
+import Tecnologies from "./components/Tecnologies.vue";
+import AboutMe from "./components/AboutMe.vue";
 </script>
 
 <template>
-	<header class="mb-6 w-full h-14 fixed z-10 bg-zinc-800">
-		<nav class="flex justify-end gap-4 py-4 px-2 max-w-6xl mx-auto">
-			<a href="https://github.com/Jd2698" target="_blank">
-				<IconGitHub class=" h-7 text-white fill-current" />
-			</a>
-			<RouterLink to="/">Sobre mí</RouterLink>
-			<RouterLink to="/skills">Habilidades</RouterLink>
-			<RouterLink to="/porfolio">Porfolio</RouterLink>
-		</nav>
-	</header>
+  <header class="fixed top-0 w-full h-14 z-10 bg-zinc-800">
+    <Nav />
+  </header>
 
-	<RouterView class="pt-20" />
+  <main class="px-4 max-w-4xl mt-24 mx-auto flex gap-24 flex-col">
+    <AboutMe />
+    <Tecnologies />
+    <Experience />
+    <Projects />
+  </main>
 </template>
 
-<style >
-nav a {
-	color: #9c9b9b;
+<style>
+* {
+  font-family: system-ui, monospace, sans-serif;
+  font-size: 19px;
 }
-nav a:focus {
-	outline: none;
-}
-nav a.router-link-exact-active {
-	color: #d8d8d8;
+
+#tecnologies,
+#aboutMe,
+#projects {
+  scroll-margin-top: 100px;
 }
 </style>
