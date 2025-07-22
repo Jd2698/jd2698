@@ -1,6 +1,6 @@
 <script setup>
 import Experience from "./components/Experience.vue";
-import Nav from "./components/Nav.vue";
+import NavComponent from "./components/Nav.vue";
 import Projects from "./components/Projects.vue";
 import Tecnologies from "./components/Tecnologies.vue";
 import AboutMe from "./components/AboutMe.vue";
@@ -8,7 +8,7 @@ import AboutMe from "./components/AboutMe.vue";
 
 <template>
   <header class="fixed top-0 w-full h-14 z-10 bg-zinc-800">
-    <Nav />
+    <NavComponent />
   </header>
 
   <main class="px-4 max-w-4xl mt-24 mx-auto flex gap-24 flex-col">
