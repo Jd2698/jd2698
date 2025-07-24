@@ -66,7 +66,7 @@ const projects = [
 </script>
 
 <template>
-  <section id="projects">
+  <section id="projects" class="text-black dark:text-white">
     <div class="flex gap-2 items-center mb-2 text-emerald-500/90">
       <svg
         class="size-6"

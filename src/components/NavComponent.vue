@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import DarkMode from "./DarkMode.vue";
 
 const activeSection = ref("");
 
@@ -46,12 +47,18 @@ const titles = [
 </script>
 
 <template>
-  <nav class="flex justify-end gap-4 py-4 px-2 max-w-6xl mx-auto">
+  <nav
+    class="flex justify-end gap-4 py-4 px-2 max-w-6xl mx-auto text-zinc-700/80 dark:text-[#9c9b9b]"
+  >
+    <DarkMode />
+
     <a
       v-for="item in titles"
       :href="`#${item.section}`"
-      :class="{ 'text-emerald-500/90': isActive(item.section) }"
-      class="text-[#9c9b9b] hover:text-[#d8d8d8]"
+      :class="{
+        'text-emerald-500/90 dark:text-emerald-600/90': isActive(item.section),
+      }"
+      class="hover:text-emerald-600/90 dark:hover:text-emerald-500/90"
       >{{ item.label }}</a
     >
   </nav>

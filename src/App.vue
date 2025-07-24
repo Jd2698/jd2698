@@ -7,7 +7,7 @@ import NavComponent from "./components/NavComponent.vue";
 </script>
 
 <template>
-  <header class="fixed top-0 w-full h-14 z-10 bg-zinc-800">
+  <header class="fixed top-0 w-full h-14 z-10 bg-neutral-200 dark:bg-zinc-800">
     <NavComponent />
   </header>
 
@@ -18,16 +18,3 @@ import NavComponent from "./components/NavComponent.vue";
     <Projects />
   </main>
 </template>
-
-<style>
-* {
-  font-family: system-ui, monospace, sans-serif;
-  font-size: 19px;
-}
-
-#tecnologies,
-#aboutMe,
-#projects {
-  scroll-margin-top: 100px;
-}
-</style>

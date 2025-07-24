@@ -4,7 +4,7 @@ defineProps(["pictures"]);
 </script>
 <template>
   <div class="space-y-4">
-    <h2 class="">
+    <h2>
       <slot name="title"></slot>
     </h2>
     <fwb-carousel
@@ -19,6 +19,7 @@ defineProps(["pictures"]);
 .container-carousel > div {
   height: 100% !important;
 }
+
 .container-carousel > div > div > img {
   height: 100% !important;
   object-fit: contain;
