@@ -7,9 +7,7 @@ import NavComponent from "./components/NavComponent.vue";
 </script>
 
 <template>
-  <header class="fixed top-0 w-full h-14 z-10 bg-neutral-200 dark:bg-zinc-800">
-    <NavComponent />
-  </header>
+  <NavComponent />
 
   <main class="px-4 max-w-4xl mt-24 mx-auto flex gap-24 flex-col">
     <AboutMe />

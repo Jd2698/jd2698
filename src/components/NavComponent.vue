@@ -47,21 +47,27 @@ const titles = [
 </script>
 
 <template>
-  <nav
-    class="flex justify-end gap-4 py-4 px-2 max-w-6xl mx-auto text-zinc-700/80 dark:text-[#9c9b9b]"
+  <header
+    class="fixed top-0 w-full min-h-14 z-10 bg-neutral-200 dark:bg-zinc-800"
   >
-    <DarkMode />
-
-    <a
-      v-for="item in titles"
-      :href="`#${item.section}`"
-      :class="{
-        'text-emerald-500/90 dark:text-emerald-600/90': isActive(item.section),
-      }"
-      class="hover:text-emerald-600/90 dark:hover:text-emerald-500/90"
-      >{{ item.label }}</a
+    <nav
+      class="flex justify-end items-center gap-2 sm:gap-4 py-4 px-2 max-w-6xl mx-auto text-zinc-700/80 dark:text-[#9c9b9b]"
     >
-  </nav>
+      <DarkMode />
+
+      <a
+        v-for="item in titles"
+        :href="`#${item.section}`"
+        :class="{
+          'text-emerald-500/90 dark:text-emerald-600/90': isActive(
+            item.section
+          ),
+        }"
+        class="hover:text-emerald-600/90 dark:hover:text-emerald-500/90"
+        >{{ item.label }}</a
+      >
+    </nav>
+  </header>
 </template>
 
 <style></style>
