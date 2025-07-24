@@ -21,7 +21,7 @@ const titles = [
 ];
 </script>
 <template>
-  <section id="aboutMe">
+  <section id="aboutMe" class="text-black dark:text-white">
     <img
       src="../../public/images/Me.jpg"
       class="size-44 object-cover rounded-full transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_25px_50px_rgba(0,0,0,.2)]"
@@ -48,20 +48,11 @@ const titles = [
         v-for="item in titles"
         :href="item.ulr"
         target="_blank"
-        class="py-2 px-3 flex items-center gap-2 rounded-xl transition-colors bg-zinc-700 hover:bg-zinc-700/70 focus:bg-zinc-700/70 outline-none"
+        class="py-2 px-3 flex items-center gap-2 rounded-xl transition-colors outline-none bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-700/70 dark:focus:bg-zinc-700/70 hover:bg-zinc-400/70 focus:bg-zinc-400/70"
       >
-        <IconGitHub
-          v-if="item.icon == 'git'"
-          class="h-5 text-zinc-200 fill-current"
-        />
-        <IconEmail
-          v-if="item.icon == 'email'"
-          class="h-5 text-zinc-200 fill-current"
-        />
-        <IconWhatsapp
-          v-if="item.icon == 'whatsapp'"
-          class="h-5 text-zinc-200 fill-current"
-        />
+        <IconGitHub v-if="item.icon == 'git'" class="h-5 fill-current" />
+        <IconEmail v-if="item.icon == 'email'" class="h-5 fill-current" />
+        <IconWhatsapp v-if="item.icon == 'whatsapp'" class="h-5 fill-current" />
 
         <span v-if="item.label" class="text-xs">{{ item.label }}</span>
       </a>
