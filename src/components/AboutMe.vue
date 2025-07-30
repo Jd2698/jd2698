@@ -23,7 +23,7 @@ const titles = [
 <template>
   <section id="aboutMe" class="text-black dark:text-white">
     <img
-      src="../../public/images/me.png"
+      src="../../public/images/me.webp"
       class="size-44 border-2 object-contain rounded-full transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_25px_50px_rgba(0,0,0,.2)]"
       alt="me"
     />
