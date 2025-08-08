@@ -1,16 +1,24 @@
 <script setup>
+import { FwbButton, FwbTooltip } from "flowbite-vue";
+import IconNestJS from "./icons/IconNestJS.vue";
+import IconAngular from "./icons/IconAngular.vue";
+import IconPostgres from "./icons/IconPostgres.vue";
+import IconPrimeNG from "./icons/IconPrimeNG.vue";
+import IconTypeORM from "./icons/IconTypeORM.vue";
+import IconRedux from "./icons/IconRedux.vue";
+
 const experiences = [
   {
     header: "Full Stack Developer, DreamCode oct.2024 - apr.2025",
     title: "Plataforma Web de Gestión de Horas y Facturación",
     body: " Durante mis prácticas en DreamCode, participé en el desarrollo de una plataforma web destinada a registrar las horas trabajadas por los ingenieros en diferentes proyectos, lo que facilitaba el cálculo y la facturación a los clientes. Trabajé en la creación de módulos tanto de backend como de frontend, implementé migraciones, integré APIs y realicé pruebas para garantizar la calidad del código. Además, colaboré estrechamente con el equipo, aplicando metodologías ágiles (SCRUM) para optimizar las entregas y mejorar continuamente el proyecto.",
     tecnologies: [
-      "NestJS",
-      "TypeORM",
-      "Angular",
-      "PrimeNG",
-      "Redux",
-      "Postgres",
+      { title: "NestJS", icon: IconNestJS },
+      { title: "TypeORM", icon: IconTypeORM },
+      { title: "Angular", icon: IconAngular },
+      { title: "PrimeNG", icon: IconPrimeNG },
+      { title: "Redux", icon: IconRedux },
+      { title: "PostgreSQL", icon: IconPostgres },
     ],
   },
 ];
@@ -56,15 +64,32 @@ const experiences = [
           {{ item.body }}
         </p>
 
-        <div class="flex flex-wrap gap-2">
-          <span
-            v-for="tecnology of item.tecnologies"
-            class="text-xs py-2 px-3 rounded-md cursor-default transition-colors outline-none bg-zinc-200 text-black dark:text-white hover:bg-zinc-300 focus:bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700/70 dark:focus:bg-zinc-700/70"
-          >
-            {{ tecnology }}
-          </span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="dark:text-gray-200">Tecnologías: </span>
+          <fwb-tooltip v-for="tecnology of item.tecnologies">
+            <template #trigger>
+              <fwb-button>
+                <component :is="tecnology.icon" class="w-4" />
+              </fwb-button>
+            </template>
+            <template #content>
+              <span class="text-xs">{{ tecnology.title }}</span>
+            </template>
+          </fwb-tooltip>
         </div>
       </li>
     </ol>
   </section>
 </template>
+
+<style>
+.fwb-tooltip button {
+  @apply size-10 p-0 bg-zinc-200/50 rounded-full flex justify-center items-center;
+  @apply dark:bg-zinc-700/50;
+}
+
+.fwb-tooltip button:hover {
+  @apply bg-zinc-300;
+  @apply dark:bg-zinc-800;
+}
+</style>

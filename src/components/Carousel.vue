@@ -21,11 +21,11 @@ defineProps(["pictures"]);
   object-fit: contain;
 }
 
-button span {
+.container-carousel button span {
   @apply bg-emerald-700/60 !important;
 }
 
-button span svg {
+.container-carousel button span svg {
   @apply text-white !important;
 }
 </style>
