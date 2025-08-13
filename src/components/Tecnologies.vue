@@ -42,7 +42,10 @@ const tecnologies = {
 </script>
 
 <template>
-  <section id="tecnologies" class="space-y-3 text-zinc-800 dark:text-white">
+  <section
+    id="tecnologies"
+    class="opacity-0 space-y-3 text-zinc-800 dark:text-white"
+  >
     <h2 class="w-full text-2xl font-semibold text-emerald-500/90">
       Tecnologías
     </h2>

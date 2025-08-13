@@ -2,18 +2,20 @@
 import { ref, onMounted } from "vue";
 import DarkMode from "./DarkMode.vue";
 
+onMounted(() => {
+  observeSections();
+});
+
 const activeSection = ref("");
 
 const isActive = (section) => {
   return activeSection.value === section;
 };
 
-onMounted(() => {
-  observeSections();
-});
-
 const observeSections = () => {
-  const sections = document.querySelectorAll("section");
+  const sections = document.querySelectorAll(
+    "#aboutMe, #tecnologies, #projects"
+  );
   const options = {
     root: null,
     threshold: 0.4,
@@ -21,7 +23,7 @@ const observeSections = () => {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting && entry.target.id) {
+      if (entry.isIntersecting) {
         activeSection.value = entry.target.id;
       }
     });
