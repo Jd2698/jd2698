@@ -2,13 +2,12 @@
 import { ref } from "vue";
 import { FwbToggle } from "flowbite-vue";
 
-const toggle = ref(false);
+const toggle = ref(true);
 
 const onChange = () => {
-  const body = document.getElementsByTagName("body")[0];
+  const body = document.getElementsByTagName("html")[0];
 
   body.classList.toggle("dark");
-  body.classList.toggle("bg-[#202020]");
 };
 </script>
 

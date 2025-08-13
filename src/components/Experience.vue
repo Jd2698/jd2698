@@ -25,7 +25,7 @@ const experiences = [
 </script>
 
 <template>
-  <section>
+  <section id="experiences">
     <div class="flex gap-2 items-center my-2 text-emerald-500/90">
       <svg
         class="size-6"
