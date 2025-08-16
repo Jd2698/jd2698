@@ -22,13 +22,6 @@ const appointmentsPictures = [
   { src: "images/appointments/13.client.webp", alt: "Image 9" },
 ];
 
-const ecommercePictures = [
-  { src: "images/ecommerce/home.webp", alt: "Image 1" },
-  { src: "images/ecommerce/cart.webp", alt: "Image 2" },
-  { src: "images/ecommerce/product.webp", alt: "Image 3" },
-  { src: "images/ecommerce/user-modal.webp", alt: "Image 4" },
-];
-
 const javaEcommercePictures = [
   { src: "images/ecommerce-java/1.login.webp", alt: "Image 1" },
   { src: "images/ecommerce-java/2.general.webp", alt: "Image 2" },
@@ -52,10 +45,6 @@ const projects = [
     title:
       "Gestión de citas médicas desarrollado con Laravel 10 e Inertia.js junto con Vue 3",
     pictures: appointmentsPictures,
-  },
-  {
-    title: "Ecommerce básico desarrollado con Laravel 9 y Vue 3",
-    pictures: ecommercePictures,
   },
   {
     title:
