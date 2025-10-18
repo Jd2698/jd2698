@@ -1,35 +1,25 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import { FwbToggle } from "flowbite-vue";
 
-const toggle = ref(false);
+// Inicializar el toggle basado en el tema actual
+const toggle = ref(document.documentElement.classList.contains('dark'));
 
-// Función para aplicar el tema
-const applyTheme = (isDark) => {
-  document.documentElement.classList.toggle("dark", isDark);
-  toggle.value = isDark;
+const onChange = () => {
+  const isDark = toggle.value;
+
+  // Aplicar cambios de manera inmediata
+  if (isDark) {
+    document.documentElement.classList.add('dark');
+    document.documentElement.style.backgroundColor = '#202020';
+  } else {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.style.backgroundColor = '#f4f4f5';
+  }
+
   localStorage.setItem("theme", isDark ? "dark" : "light");
 };
 
-// Inicializar tema antes de que se monte el componente para evitar parpadeos
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  document.documentElement.classList.toggle("dark", savedTheme === "dark");
-}
-
-onMounted(() => {
-  if (savedTheme) {
-    applyTheme(savedTheme === "dark");
-  } else {
-    // Detectar preferencia del sistema
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    applyTheme(mediaQuery.matches);
-  }
-});
-
-const onChange = () => {
-  applyTheme(toggle.value);
-};
 </script>
 
 <template>
@@ -97,13 +87,6 @@ const onChange = () => {
 nav input + span {
   @apply ring-0 !important;
   @apply bg-zinc-400/50 !important;
-}
-
-/* Transición suave para cambios de tema */
-html {
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
 }
 
 /* Asegurar que los elementos con colores específicos también tengan transición */

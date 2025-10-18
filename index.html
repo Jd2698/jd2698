@@ -1,12 +1,24 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/code.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porfolio</title>
-  </head>
-  <body class="dark:bg-[#202020]">
+    <script>
+      // Aplicar el tema inmediatamente
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.backgroundColor = '#202020';
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.style.backgroundColor = '#f4f4f5';
+        }
+      })();
+    </script>
+  <body class="bg-zinc-100 dark:bg-[#202020]">
     <div id="app"></div>
 
     <script type="module" src="/src/main.js"></script>
