@@ -7,11 +7,26 @@ import IconPrimeNG from "./icons/IconPrimeNG.vue";
 import IconTypeORM from "./icons/IconTypeORM.vue";
 import IconRedux from "./icons/IconRedux.vue";
 
+import IconLaravel from "./icons/IconLaravel.vue";
+import IconMySQL from "./icons/IconMySql.vue";
+import IconVue from "./icons/IconVue.vue";
+import IconFirebase from "./icons/IconFirebase.vue";
+
 const experiences = [
   {
-    header: "Full Stack Developer, DreamCode oct.2024 - apr.2025",
+    header: "Desarrollador Backend · Panthera Hub (sep. 2025 – dic. 2025)",
+    body: "Participé como desarrollador backend en una aplicación en producción, realizando refactorización de módulos, desarrollo de nuevos servicios y gestión de migraciones de base de datos. Además, apoyé la corrección de bugs en frontend e integré notificaciones push mediante Firebase para la aplicación móvil, contribuyendo a la mejora continua del sistema.",
+    tecnologies: [
+      { title: "Laravel", icon: IconLaravel },
+      { title: "MySQL", icon: IconMySQL },
+      { title: "Firebase", icon: IconFirebase },
+      { title: "Vue", icon: IconVue },
+    ],
+  },
+  {
+    header: "Desarrollador Full Stack · DreamCode (oct. 2024 – abr. 2025)",
     title: "Plataforma Web de Gestión de Horas y Facturación",
-    body: " Durante mis prácticas en DreamCode, participé en el desarrollo de una plataforma web destinada a registrar las horas trabajadas por los ingenieros en diferentes proyectos, lo que facilitaba el cálculo y la facturación a los clientes. Trabajé en la creación de módulos tanto de backend como de frontend, implementé migraciones, integré APIs y realicé pruebas para garantizar la calidad del código. Además, colaboré estrechamente con el equipo, aplicando metodologías ágiles (SCRUM) para optimizar las entregas y mejorar continuamente el proyecto.",
+    body: "Durante mis prácticas en DreamCode, participé en el desarrollo de una plataforma web destinada a registrar las horas trabajadas por los ingenieros en diferentes proyectos, lo que facilitaba el cálculo y la facturación a los clientes. Trabajé en la creación de módulos tanto de backend como de frontend, implementé migraciones, integré APIs y realicé pruebas para garantizar la calidad del código. Además, colaboré estrechamente con el equipo, aplicando metodologías ágiles (SCRUM) para optimizar las entregas y mejorar continuamente el proyecto.",
     tecnologies: [
       { title: "NestJS", icon: IconNestJS },
       { title: "TypeORM", icon: IconTypeORM },
@@ -55,7 +70,7 @@ const experiences = [
           class="mb-1 text-sm font-normal leading-none text-zinc-600 dark:text-gray-400"
           >{{ item.header }}</time
         >
-        <h3 class="text-lg font-semibold text-zinc-800 dark:text-gray-200">
+        <h3 v-if="item.title" class="text-lg font-semibold text-zinc-800 dark:text-gray-200">
           {{ item.title }}
         </h3>
         <p
@@ -66,7 +81,7 @@ const experiences = [
 
         <div class="flex flex-wrap items-center gap-2">
           <span class="dark:text-gray-200">Tecnologías: </span>
-          <fwb-tooltip v-for="tecnology of item.tecnologies">
+          <fwb-tooltip v-for="tecnology of item.tecnologies" v-bind:key="tecnology.title">
             <template #trigger>
               <fwb-button>
                 <component :is="tecnology.icon" class="w-4" />
