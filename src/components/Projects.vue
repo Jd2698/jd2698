@@ -77,11 +77,8 @@ const projects = [
     </div>
 
     <div class="space-y-14 mb-4">
-      <carousel v-for="item in projects" :pictures="item.pictures">
-        <template #title>
-          {{ item.title }}
-        </template>
-      </carousel>
+      <carousel v-for="project in projects" :project="project" v-bind:key="project.title"></carousel>
     </div>
   </section>
 </template>
+
