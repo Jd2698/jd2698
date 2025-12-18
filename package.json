@@ -11,7 +11,8 @@
   "dependencies": {
     "flowbite": "^2.3.0",
     "flowbite-vue": "^0.1.5",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue3-carousel": "^0.17.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
