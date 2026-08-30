@@ -56,7 +56,7 @@ const projects = [
 
 <template>
   <section id="projects" class="text-black dark:text-white">
-    <div class="flex gap-2 items-center mb-2 text-emerald-500/90">
+    <div class="flex gap-2 items-center mb-2 text-emerald-700 dark:text-emerald-500">
       <svg
         class="size-6"
         aria-hidden="true"
@@ -73,7 +73,7 @@ const projects = [
         />
       </svg>
 
-      <h2 class="text-2xl font-semibold">Proyectos</h2>
+      <h2 class="text-2xl font-bold">Proyectos</h2>
     </div>
 
     <div class="space-y-14 mb-4">
