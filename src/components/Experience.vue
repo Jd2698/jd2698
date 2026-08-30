@@ -40,7 +40,7 @@ const experiences = [
 </script>
 
 <template>
-  <section id="experiences">
+  <section id="skill">
     <div class="flex gap-2 items-center my-2 text-emerald-700 dark:text-emerald-500">
       <svg
         class="size-6"

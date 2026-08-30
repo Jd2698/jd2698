@@ -13,20 +13,21 @@ const isActive = (section) => {
 };
 
 const observeSections = () => {
-  const sections = document.querySelectorAll(
-    "#aboutMe, #tecnologies, #projects"
-  );
+  const sections = document.querySelectorAll("#aboutMe, #skill, #projects");
   const options = {
     root: null,
-    threshold: 0.4,
+    threshold: [0.3, 0.6],
+    rootMargin: "0px 0px -10% 0px",
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        activeSection.value = entry.target.id;
-      }
-    });
+    const visibleEntry = [...entries]
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+    if (visibleEntry) {
+      activeSection.value = visibleEntry.target.id;
+    }
   }, options);
 
   sections.forEach((section) => observer.observe(section));
@@ -38,8 +39,8 @@ const titles = [
     label: "Sobre mí",
   },
   {
-    section: "tecnologies",
-    label: "Habilidades",
+    section: "skill",
+    label: "Experiencia",
   },
   {
     section: "projects",
