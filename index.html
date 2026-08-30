@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/jd2698/code.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porfolio</title>
+    <script>
+      // Aplicar el tema inmediatamente
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.backgroundColor = '#202020';
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.style.backgroundColor = '#f4f4f5';
+        }
+      })();
+    </script>
+  <script type="module" crossorigin src="/jd2698/assets/index-tG9yAfXy.js"></script>
+  <link rel="stylesheet" crossorigin href="/jd2698/assets/index-DrdskNF0.css">
+
+  <body class="bg-zinc-100 dark:bg-[#202020]">
+    <div id="app"></div>
+
+    <!-- <script src="/node_modules/flowbite/dist/flowbite.min.js"></script> -->
+  </body>
+</html>
