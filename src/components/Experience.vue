@@ -41,7 +41,7 @@ const experiences = [
 
 <template>
   <section id="experiences">
-    <div class="flex gap-2 items-center my-2 text-emerald-500/90">
+    <div class="flex gap-2 items-center my-2 text-emerald-700 dark:text-emerald-500">
       <svg
         class="size-6"
         aria-hidden="true"
@@ -58,7 +58,7 @@ const experiences = [
         />
       </svg>
 
-      <h2 class="text-2xl font-semibold">Experiencia</h2>
+      <h2 class="text-2xl font-bold">Experiencia</h2>
     </div>
 
     <ol class="relative m-auto border-s border-zinc-950 dark:border-gray-200">
@@ -67,14 +67,14 @@ const experiences = [
           class="absolute w-3 h-3 border border-black bg-zinc-800 dark:bg-gray-200 rounded-full mt-1.5 -start-1.5 dark:border-white"
         ></div>
         <time
-          class="mb-1 text-sm font-normal leading-none text-zinc-600 dark:text-gray-400"
+          class="mb-1 text-sm font-semibold tracking-wide text-zinc-800 dark:text-gray-200"
           >{{ item.header }}</time
         >
-        <h3 v-if="item.title" class="text-lg font-semibold text-zinc-800 dark:text-gray-200">
+        <h3 v-if="item.title" class="mt-2 text-lg font-semibold tracking-wide text-zinc-800 dark:text-white">
           {{ item.title }}
         </h3>
         <p
-          class="my-4 text-sm font-normal leading-6 text-zinc-900 dark:text-gray-300"
+          class="my-4 text-sm font-normal leading-6 text-zinc-900 dark:text-gray-200"
         >
           {{ item.body }}
         </p>
